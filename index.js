@@ -1,4 +1,13 @@
-const { Person } = require("./person");
+const dotenv = require("dotenv");
+
+const connectToDatabase = require("./src/database/connect");
+
+dotenv.config();
+
+connectToDatabase();
+
+require("./modules/express");
+// const { Person } = require("./person");
 
 //const person = new Person('Cl')
 // console.log(person.sayMyName())
@@ -6,7 +15,5 @@ const { Person } = require("./person");
 // require('./modules/path')
 //require('./modules/fs')
 //require('./modules/http')
-require('./modules/express')
-
 
 // E1aErI7irlymtp7w
